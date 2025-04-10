@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DécorMoi - Spécialiste en Cuisines</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+
+  <header>
+    <div class="overlay"></div>
+    <h1>DécorMoi</h1>
+    <p>Transformez votre cuisine en œuvre d’art</p>
+    <a href="#contact" class="cta">Demander un devis</a>
+  </header>
+
+  <section class="carousel-container">
+    <h2>Nos cuisines en image</h2>
+    <div class="carousel">
+      <img src="images/cuisine-luxe.jpg" alt="Cuisine 1" />
+      <!-- Ajoutez d’autres images ici -->
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>Galerie Photo</h2>
+    <div class="gallery-grid">
+      <img src="images/cuisine-luxe.jpg" alt="Cuisine 1" />
+      <img src="images/cuisine-luxe.jpg" alt="Cuisine 2" />
+      <img src="images/cuisine-luxe.jpg" alt="Cuisine 3" />
+      <img src="images/cuisine-luxe.jpg" alt="Cuisine 4" />
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Demander un devis gratuit</h2>
+    <form>
+      <input type="text" placeholder="Nom complet" required />
+      <input type="email" placeholder="Adresse email" required />
+      <input type="tel" placeholder="Numéro de téléphone" required />
+
+      <div class="form-row">
+        <input type="text" placeholder="Longueur de la cuisine (en mètres)" required />
+        <input type="text" placeholder="Largeur de la cuisine (en mètres)" required />
+      </div>
+
+      <select required>
+        <option value="" disabled selected>Style de cuisine souhaité</option>
+        <option>Moderne</option>
+        <option>Cuisine en U</option>
+        <option>Cuisine en L</option>
+        <option>Cuisine Ouverte</option>
+        <option>Autre</option>
+      </select>
+
+      <input type="text" placeholder="Budget estimé (en MAD)" />
+
+      <textarea placeholder="Autres précisions (couleurs, matériaux, etc.)" rows="4"></textarea>
+
+      <button type="submit">Envoyer ma demande</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2024 DécorMoi | Tous droits réservés.</p>
+    <div class="socials">
+      <a href="https://wa.me/212722305480" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp" /></a>
+      <a href="https://www.instagram.com/decormoi__" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/profile.php?id=100095484092149" target="_blank"><img src="images/facebook.png" alt="Facebook" /></a>
+      <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt="YouTube" /></a>
+    </div>
+  </footer>
+
+  <div class="floating-icons">
+    <a href="https://wa.me/212722305480" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp" /></a>
+  </div>
+
+</body>
+</html>
