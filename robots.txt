@@ -1,0 +1,20 @@
+# Autoriser tous les robots à explorer le site
+User-agent: *
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Autoriser Googlebot à explorer tous les contenus
+User-agent: Googlebot
+Allow: /
+
+# Désactiver l'indexation de certaines pages sensibles (par exemple, une page de connexion)
+User-agent: *
+Disallow: /login/
+Disallow: /admin/
+
+# Exemple pour exclure les fichiers spécifiques (comme les fichiers de test ou de staging)
+Disallow: /test/
+Disallow: /staging/
+
+# S'assurer que le fichier sitemap est bien pris en compte
+Sitemap: https://www.decormoi.ma/sitemap.xml
