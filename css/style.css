@@ -1,4 +1,4 @@
-/* Réinitialisation de base */
+/* Reset de base */
 * {
   margin: 0;
   padding: 0;
@@ -6,224 +6,186 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  background: #000;
   color: #fff;
-  background: url('../images/cuisine-luxe.jpg') no-repeat center center fixed;
-  background-size: cover;
+  overflow-x: hidden;
 }
 
-/* Overlay pour rendre le texte lisible */
+header {
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+  background: linear-gradient(to right, #111, #222);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
 header .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background: url('../images/arrière-plan3.jpg') no-repeat center center/cover;
+  opacity: 0.1;
+  z-index: 0;
 }
 
-/* Header principal */
-header {
+header h1,
+header p,
+header a {
   position: relative;
-  height: 100vh;
-  text-align: center;
-  padding-top: 150px;
-  background-position: center;
-  background-size: cover;
   z-index: 2;
-}
-
-header h1 {
-  font-size: 4rem;
-  color: gold;
-  z-index: 2;
-  position: relative;
-}
-
-header p {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  z-index: 2;
-  position: relative;
 }
 
 .cta {
-  padding: 12px 25px;
-  background-color: gold;
-  color: black;
-  text-decoration: none;
+  background-color: #d4af37;
+  color: #000;
+  padding: 0.8rem 1.8rem;
   font-weight: bold;
+  font-size: 1.1rem;
   border-radius: 30px;
-  z-index: 2;
-  position: relative;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .cta:hover {
-  background-color: #e6c200;
+  background-color: #e6c14c;
+  color: #111;
 }
 
-/* Sections */
-section {
-  padding: 60px 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+section, footer {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(4px);
 }
 
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: gold;
-}
-
-/* Carousel */
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 10px;
-  padding: 10px;
-  justify-content: center;
-}
-
-.carousel img {
-  max-height: 300px;
+.carousel img,
+.gallery-grid img {
+  max-width: 100%;
   border-radius: 10px;
-  scroll-snap-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* Galerie */
+.carousel img:hover,
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.about-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.founder-info h3 {
+  margin-bottom: 0.5rem;
+  color: #d4af37;
+}
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
-.gallery-grid img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Témoignages */
-.testimonials {
-  text-align: center;
-}
-
-.testimonial {
-  background-color: rgba(255, 215, 0, 0.1);
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 600px;
-  border-left: 4px solid gold;
-  border-radius: 8px;
-}
-
-/* Contact / Devis */
-.contact form {
-  max-width: 700px;
-  margin: 0 auto;
+form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.8rem;
 }
 
-.contact input,
-.contact select,
-.contact textarea {
-  padding: 12px;
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+form input,
+form select,
+form textarea {
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #f3f3f3;
   font-size: 1rem;
+  color: #000;
   width: 100%;
 }
 
-.contact select {
-  background-color: #fff;
-  color: #000;
-}
-
-.contact .form-row {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
-
-.contact .form-row input {
-  flex: 1;
-}
-
-.contact button {
-  background-color: gold;
-  color: black;
-  padding: 12px;
-  font-weight: bold;
+form button {
+  background-color: #d4af37;
   border: none;
+  color: black;
+  font-weight: bold;
+  padding: 1rem;
+  margin-top: 1rem;
   border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  width: 100%;
+  transition: background 0.3s ease;
 }
 
-.contact button:hover {
-  background-color: #e6c200;
+form button:hover {
+  background-color: #e6c14c;
 }
 
-/* Footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
-  padding: 30px 20px;
-  margin-top: 40px;
+  padding-top: 2rem;
 }
 
-footer p {
-  margin-bottom: 15px;
-  color: #aaa;
-}
-
-footer .socials a img {
+.socials img,
+.floating-icons img {
   width: 30px;
   margin: 0 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
-footer .socials a img:hover {
-  transform: scale(1.2);
-}
-
-/* Icône flottante WhatsApp */
 .floating-icons {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 99;
-}
-
-.floating-icons img {
-  width: 50px;
-  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
 }
 
 .floating-icons img:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px) scale(1.1);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  .contact .form-row {
+  .about-container,
+  .form-row {
     flex-direction: column;
   }
 
-  .carousel img {
-    max-height: 200px;
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .floating-icons img {
-    width: 45px;
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Animations générales */
+header, section, footer {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
