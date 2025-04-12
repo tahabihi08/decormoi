@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DécorMoi - Cuisine de Luxe</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DécorMoi - Spécialiste en Cuisines</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
 
   <header>
     <div class="overlay"></div>
-    <h1>Transformez votre cuisine en chef-d'œuvre</h1>
-    <p>Design haut de gamme & réalisation sur mesure</p>
-    <a href="#contact" class="cta">Demandez un devis</a>
+    <h1>DécorMoi</h1>
+    <p>Transformez votre cuisine en œuvre d’art</p>
+    <a href="#contact" class="cta">Demander un devis</a>
   </header>
 
-  <!-- Galerie avec slider -->
   <section class="carousel-container">
-    <h2>Notre Galerie</h2>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn left">&#10094;</button>
-      <div class="carousel" id="carousel">
-        <img src="images/photo1.jpg" alt="Cuisine 1">
-        <img src="images/photo2.jpg" alt="Cuisine 2">
-        <img src="images/photo3.jpg" alt="Cuisine 3">
-        <!-- Ajoute ici d'autres images si nécessaire -->
+    <h2>Nos cuisines en image</h2>
+    <div class="carousel">
+      <img src="images/cuisine-luxe.jpg" alt="Cuisine 1" />
+      <!-- Ajoutez d’autres images ici -->
+    </div>
+  </section>
+  
+<!-- Nouvelle section À propos -->
+  <section class="about" id="a-propos">
+    <h2>À propos de DécorMoi</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p><strong>DécorMoi</strong> est une société marocaine spécialisée dans la décoration intérieure, avec un focus particulier sur la création de cuisines élégantes, fonctionnelles et personnalisées.</p>
+        <p>Notre mission est de transformer chaque espace cuisine en une œuvre d’art pratique et chaleureuse, selon vos goûts et vos besoins.</p>
+        <p>Nous utilisons des matériaux haut de gamme et un savoir-faire précis pour garantir un résultat à la hauteur de vos attentes.</p>
       </div>
-      <button class="carousel-btn right">&#10095;</button>
+      <div class="founder-info">
+        <h3>Le fondateur</h3>
+        <p><strong>Youssef BIHI</strong>, fondateur et directeur de DécorMoi, est un passionné de design avec plus de 16 ans d’expérience dans l’aménagement intérieur. Grâce à sa vision, DécorMoi s’est imposée comme une référence dans la décoration de cuisines au Maroc.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="gallery">
+    <h2>Galerie Photo</h2>
+    <div class="gallery-grid">
+      <img src="images/cuisine1.jpg" alt="Cuisine 1" />
+      <img src="images/cuisine2.jpg" alt="Cuisine 2" />
+      <img src="images/cuisine3.jpg" alt="Cuisine 3" />
+      <img src="images/cuisine4.jpg" alt="Cuisine 4" />
     </div>
   </section>
 
-  <!-- Exemple de section contact -->
-  <section id="contact" class="contact">
-    <h2>Contactez-nous</h2>
+  <section class="contact" id="contact">
+    <h2>Demander un devis gratuit</h2>
     <form>
+      <input type="text" placeholder="Nom complet" required />
+      <input type="email" placeholder="Adresse email" required />
+      <input type="tel" placeholder="Numéro de téléphone" required />
+
       <div class="form-row">
-        <input type="text" placeholder="Nom">
-        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Longueur de la cuisine (en mètres)" required />
+        <input type="text" placeholder="Largeur de la cuisine (en mètres)" required />
       </div>
-      <textarea placeholder="Votre message"></textarea>
-      <button type="submit">Envoyer</button>
+
+      <select required>
+        <option value="" disabled selected>Style de cuisine souhaité</option>
+        <option>Moderne</option>
+        <option>Cuisine en U</option>
+        <option>Cuisine en L</option>
+        <option>Cuisine Ouverte</option>
+        <option>Autre</option>
+      </select>
+
+      <input type="text" placeholder="Budget estimé (en MAD)" />
+
+      <textarea placeholder="Autres précisions (couleurs, matériaux, etc.)" rows="4"></textarea>
+
+      <button type="submit">Envoyer ma demande</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 DécorMoi - Tous droits réservés</p>
+    <p>© 2024 DécorMoi | Tous droits réservés.</p>
     <div class="socials">
-      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://wa.me/212722305480" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp" /></a>
+      <a href="https://www.instagram.com/decormoi__" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/profile.php?id=100095484092149" target="_blank"><img src="images/facebook.png" alt="Facebook" /></a>
+      <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt="YouTube" /></a>
     </div>
   </footer>
 
   <div class="floating-icons">
-    <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-    <a href="#"><img src="images/email.png" alt="Email"></a>
+    <a href="https://wa.me/212722305480" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp" /></a>
+    <a href="https://www.instagram.com/decormoi__" target="_blank"><img src="images/instagram.png" alt="Instagram" /></a>
+    <a href="https://www.facebook.com/profile.php?id=100095484092149" target="_blank"><img src="images/facebook.png" alt="Facebook" /></a>
+    <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt="YouTube" /></a>
   </div>
-
-  <!-- Script du slider -->
-  <script>
-    const carousel = document.getElementById('carousel');
-    const leftBtn = document.querySelector('.carousel-btn.left');
-    const rightBtn = document.querySelector('.carousel-btn.right');
-
-    leftBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-
-    rightBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: 300, behavior: 'smooth' });
-    });
-  </script>
-
-  <!-- Live Chat Tawk.to -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/TON_ID_TAWK/1hxxxxxxxx';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
 
 </body>
 </html>
