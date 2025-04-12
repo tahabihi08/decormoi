@@ -77,13 +77,6 @@ h2 {
   text-align: center;
 }
 
-.carousel-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
 .carousel {
   display: flex;
   justify-content: center;
@@ -91,7 +84,6 @@ h2 {
   overflow-x: auto;
   gap: 20px;
   scroll-behavior: smooth;
-  padding: 20px 0;
 }
 
 .carousel::-webkit-scrollbar {
@@ -106,21 +98,6 @@ h2 {
 
 .carousel img:hover {
   transform: scale(1.05);
-}
-
-.carousel-btn {
-  background: rgba(255, 215, 0, 0.9);
-  border: none;
-  font-size: 2em;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: black;
-  transition: background 0.3s ease;
-}
-
-.carousel-btn:hover {
-  background: gold;
 }
 
 .about-container {
@@ -245,3 +222,4 @@ footer {
   max-width: 100%;
   text-align: center;
 }
+
