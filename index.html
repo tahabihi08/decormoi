@@ -16,6 +16,14 @@
     "logo": "https://www.decormoi.ma/images/logo.png"
   }
   </script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("VTM1-Hyq0tiu0asBe"); // Clé publique
+    })();
+  </script>
 </head>
 <body>
 
@@ -36,18 +44,15 @@
     <h2>Nos cuisines en image</h2>
     <div class="carousel">
       <img src="images/cuisine-luxe.jpg" alt="Cuisine 1" />
-      <!-- Ajoutez d’autres images ici -->
     </div>
   </section>
   
-<!-- Nouvelle section À propos -->
   <section class="about" id="a-propos">
     <h2>À propos de DécorMoi</h2>
     <div class="about-container">
       <div class="about-text">
         <p><strong>DécorMoi</strong> est une société marocaine spécialisée dans la décoration intérieure, avec un focus particulier sur la création de cuisines élégantes, fonctionnelles et personnalisées.</p>
-        <p>Notre mission est de transformer chaque espace cuisine en une œuvre d’art pratique et chaleureuse, selon vos goûts et vos besoins.</p>
-        <p>Nous utilisons des matériaux haut de gamme et un savoir-faire précis pour garantir un résultat à la hauteur de vos attentes.</p>
+        <p>Notre mission est de transformer chaque espace cuisine en une œuvre d’art pratique et chaleureuse, selon vos goûts et vos besoins.</p></p>
       </div>
       <div class="founder-info">
         <h3>Le fondateur</h3>
@@ -68,16 +73,14 @@
 
   <section class="contact" id="contact">
     <h2>Demander un devis gratuit</h2>
-    <form>
+    <form id="devis-form">
       <input type="text" placeholder="Nom complet" required />
       <input type="email" placeholder="Adresse email" required />
       <input type="tel" placeholder="Numéro de téléphone" required />
-
       <div class="form-row">
         <input type="text" placeholder="Longueur de la cuisine (en mètres)" required />
         <input type="text" placeholder="Largeur de la cuisine (en mètres)" required />
       </div>
-
       <select required>
         <option value="" disabled selected>Style de cuisine souhaité</option>
         <option>Moderne</option>
@@ -86,11 +89,8 @@
         <option>Cuisine Ouverte</option>
         <option>Autre</option>
       </select>
-
       <input type="text" placeholder="Budget estimé (en MAD)" />
-
       <textarea placeholder="Autres précisions (couleurs, matériaux, etc.)" rows="4"></textarea>
-
       <button type="submit">Envoyer ma demande</button>
     </form>
   </section>
@@ -111,6 +111,35 @@
     <a href="https://www.facebook.com/profile.php?id=100095484092149" target="_blank"><img src="images/facebook.png" alt="Facebook" /></a>
     <a href="https://www.youtube.com/@decormoi/" target="_blank"><img src="images/youtube.png" alt="YouTube" /></a>
   </div>
+
+  <!-- Script EmailJS -->
+  <script>
+    const form = document.getElementById("devis-form");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const templateParams = {
+        nom: form.querySelector('input[placeholder="Nom complet"]').value,
+        email: form.querySelector('input[type="email"]').value,
+        telephone: form.querySelector('input[type="tel"]').value,
+        longueur: form.querySelector('input[placeholder="Longueur de la cuisine (en mètres)"]').value,
+        largeur: form.querySelector('input[placeholder="Largeur de la cuisine (en mètres)"]').value,
+        style: form.querySelector('select').value,
+        budget: form.querySelector('input[placeholder="Budget estimé (en MAD)"]').value,
+        message: form.querySelector('textarea').value
+      };
+
+      emailjs.send("service_eeucj0e", "template_behglaa", templateParams)
+        .then(function(response) {
+          alert("Votre demande a bien été envoyée !");
+          form.reset();
+        }, function(error) {
+          alert("Erreur lors de l’envoi. Veuillez réessayer.");
+          console.error("Erreur EmailJS :", error);
+        });
+    });
+  </script>
 
 </body>
 </html>
