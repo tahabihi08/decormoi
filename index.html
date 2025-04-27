@@ -1,128 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DécorMoi - Décoration d'intérieur</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-9020123325551138">
+    <title>DécorMoi - Décoration d'intérieur</title>
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Schema Logo pour Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "DécorMoi",
-    "url": "https://www.decormoi.ma/",
-    "logo": "https://www.decormoi.ma/images/logo.png"
-  }
-  </script>
-
-  <!-- Animation lors du scroll -->
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('images/cuisine-luxe.jpg') no-repeat center center fixed;
-      background-size: cover;
-      background-color: black;
+    <!-- Schema Logo pour Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DécorMoi",
+      "url": "https://www.decormoi.ma/",
+      "logo": "https://www.decormoi.ma/images/logo.png"
     }
-
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Couche sombre sur l'image */
-      z-index: 1;
-    }
-
-    header {
-      position: relative;
-      text-align: center;
-      color: white;
-      padding: 100px 20px;
-      overflow: hidden;
-    }
-
-    header h1, header p, .cta {
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #d4af37;
-      color: black;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .cta:hover {
-      background-color: #b89028;
-    }
-
-    /* Footer doré */
-    footer {
-      background-color: #d4af37;
-      text-align: center;
-      padding: 20px;
-      color: black;
-    }
-
-    .socials img {
-      width: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
-    }
-
-    /* Galerie et sections */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* Animation Fade-in */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Floating icons */
-    .floating-icons {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 1000;
-    }
-
-    .floating-icons img {
-      width: 40px;
-      border-radius: 50%;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-  </style>
+    </script>
 </head>
-
 <body>
 
   <!-- Header -->
@@ -133,15 +28,16 @@
     <a href="#contact" class="cta">Demander un devis</a>
   </header>
 
-  <section class="carousel-container fade-in">
+  <section class="carousel-container">
     <h2>Nos cuisines en image</h2>
     <div class="carousel">
       <img src="images/cuisine-luxe.jpg" alt="Cuisine 1" />
       <!-- Ajoutez d’autres images ici -->
     </div>
   </section>
-
-  <section class="about fade-in" id="a-propos">
+  
+  <!-- Nouvelle section À propos -->
+  <section class="about" id="a-propos">
     <h2>À propos de DécorMoi</h2>
     <div class="about-container">
       <div class="about-text">
@@ -155,8 +51,8 @@
       </div>
     </div>
   </section>
-
-  <section class="gallery fade-in">
+  
+  <section class="gallery">
     <h2>Galerie Photo</h2>
     <div class="gallery-grid">
       <img src="images/cuisine1.jpg" alt="Cuisine 1" />
@@ -166,7 +62,7 @@
     </div>
   </section>
 
-  <section class="contact fade-in" id="contact">
+  <section class="contact" id="contact">
     <h2>Demander un devis gratuit</h2>
     <form id="contact-form">
       <input type="text" name="nom" placeholder="Nom complet" required />
@@ -212,7 +108,7 @@
     <a href="https://www.youtube.com/@decormoi/" target="_blank"><img src="images/youtube.png" alt="YouTube" /></a>
   </div>
 
-  <!-- EmailJS -->
+    <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
